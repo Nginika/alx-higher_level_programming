@@ -18,7 +18,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
     check = sys.argv[4]
     cursor.execute("""SELECT * FROM states\
-                    WHERE name LIKE '{}'\
+                    WHERE name LIKE BINARY '{}'\
                     ORDER BY states.id ASC;""".format(check.strip("'")))
 
     states = cursor.fetchall()
