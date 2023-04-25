@@ -7,5 +7,5 @@ request(url, (err, response) => {
     console.log(err);
   } else {
     console.log(`code: ${response.statusCode}`);
-    }
+  }
 });
